@@ -1,5 +1,5 @@
 ## Chanon Panpila 5922793468 
-I Do it alone B/C My friend have group already.
+I ***do it alone*** B/C My friend have joined other group already.
 
 ### Homework
 
