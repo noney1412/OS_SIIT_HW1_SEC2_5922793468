@@ -10,15 +10,16 @@
 
 #define SHSIZE 100
 
-int main(int argc, char *argv[]) {
+int main(int argc, char *argv[]) 
+{
   int shmid;
   key_t key;
   char *shm;
   char *s;
 
-  key = 1150;
+  key = 9876;
 
-  shmid = shmget(key, SHSIZE, IPC_CREAT | 1234);
+  shmid = shmget(key, SHSIZE, 0666);
 
   if (shmid < 0) {
     perror("shmget");
@@ -27,17 +28,17 @@ int main(int argc, char *argv[]) {
 
   shm = shmat(shmid, NULL, 0);
 
-  if (shm == (char *)-1) {
+  if (shm == (char *) -1) {
     perror("smhat");
-    exit(1)
+    exit(1);
   }
 
-  for (s = shm; *s != 0; s++)
+  for(s = shm; *s != 0; s++)
     printf("%c", *s);
 
   printf("\n");
 
-  *shm = "*";
+  *shm = '*';
 
   return 0;
 }

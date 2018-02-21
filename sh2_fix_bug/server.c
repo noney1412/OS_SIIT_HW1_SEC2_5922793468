@@ -4,6 +4,7 @@
 #include <sys/ipc.h>
 #include <sys/shm.h>
 #include <sys/types.h>
+#include <unistd.h>
 
 /** ย้ายไป linux
  **/
@@ -17,9 +18,9 @@ int main(int argc, char *argv[])
   char *shm;
   char *s;
 
-  key = 1150;
+  key = 9876;
 
-  shmid = shmget(key, SHSIZE, IPC_CREAT | 1234);
+  shmid = shmget(key, SHSIZE, IPC_CREAT | 0666);
 
   if (shmid < 0) {
     perror("shmget");
@@ -28,15 +29,15 @@ int main(int argc, char *argv[])
 
   shm = shmat(shmid, NULL, 0);
 
-  if (shm == (char *)-1) {
+  if (shm == (char *) -1) {
     perror("smhat");
-    exit(1)
+    exit(1);
   }
 
-  memory(shm, "Chanon Panpila", 14);
+  memcpy(shm, "Chanon Panpila", 14);
 
   s = shm;
-  s += 14;
+  s += 15;
 
   *s = 0;
 
