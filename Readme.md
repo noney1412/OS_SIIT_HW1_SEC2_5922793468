@@ -23,4 +23,6 @@ Group Homework:
 
 ### ShareMemory 
 
-**Debuging 
+**Debuging USE --> sh2_fix_bug folder instead**
+
+![HW](./img/sharemem.png)

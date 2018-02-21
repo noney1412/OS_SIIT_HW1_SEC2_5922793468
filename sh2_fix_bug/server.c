@@ -10,7 +10,8 @@
 
 #define SHSIZE 100
 
-int main(int argc, char *argv[]) {
+int main(int argc, char *argv[]) 
+{
   int shmid;
   key_t key;
   char *shm;
