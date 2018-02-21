@@ -1,3 +1,6 @@
+## Chanon Panpila 5922793468 
+I Do it alone B/C My friend have group already.
+
 ### Homework
 
 Group Homework:
@@ -9,7 +12,6 @@ Group Homework:
 
 ![HW](./img/asg.jpg)
 
-## Chanon Panpila 5922793468 I Do it alone B/C My friend have group already.
 
 **Key_Success : ChildProcess**
 - ***Negative Value***: creation of a child process was unsuccessful.
