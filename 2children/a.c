@@ -12,20 +12,22 @@ int main() {
   pid_t pid_B, pid_C;
 
   printf("Hello world! Parent process_ID %d \n", getpid());
-  
+
   pid_B = fork();
+  pid_C = fork();
 
-  printf("Hello world! from B process_ID %d \n", getpid());
+  if (pid_B == 0) {
+    printf("Hello world! from B process_ID %d \n", getpid());
+  }
 
-  if (getpid() < 0) {
+  else if (getpid() < 0) {
     printf("error");
   }
 
-  pid_C = fork();
+  if (pid_C == 0)
+    printf("Hello world from C ! process_ID %d \n", getpid());
 
-  printf("Hello world from C ! process_ID %d \n", getpid());
-
-  if (getpid() < 0) {
+  else if (getpid() < 0) {
     printf("error");
   }
 
