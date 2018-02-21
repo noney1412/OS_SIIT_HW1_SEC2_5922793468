@@ -10,12 +10,12 @@ int main() {
   pid_B = fork(); // Child B
 
   if (pid_B == 0) {
-    printf("Child B created : --> ", getpid());
+    printf("Child B created : --> %d", getpid());
 
     pid_C = fork(); // Child C in B
 
     if (pid_C == 0) {
-      printf("Child C created : --> ", getpid());
+      printf("Child C created : --> %d ", getpid());
     }
 
   }
