@@ -17,4 +17,10 @@ Group Homework:
 - ***Positive value***: Returned to parent or caller. The value contains process ID
   of newly created child process.
 
+![HW](./img/ex1-2.png)
 
+
+
+### ShareMemory 
+
+**Debuging 

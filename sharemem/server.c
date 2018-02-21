@@ -30,9 +30,6 @@ int main ()
   memcpy(shmaddr, &next, sizeof (next));
   printf ("writer ended.\n");
 
-  /*calling the other process*/
-  system("./read");
-
   /* Detach the shared memory segment. */
   shmdt (shmaddr);
   /* Deallocate the shared memory segment.*/
